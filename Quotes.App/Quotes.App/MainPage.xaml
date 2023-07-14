@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Quotes.App.MainPage"
+              BackgroundColor="#1B263B">
+    <!--Pages can be added as references or inline-->
+    <CarouselPage.Resources>
+        <Style x:Key="layout" TargetType="StackLayout">
+            <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="Padding" Value="2"/>
+        </Style>
+
+        <Style x:Key="quoteLayout" TargetType="StackLayout">
+            <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="Margin" Value="2, 30, 2, 10"/>
+            <Setter Property="HeightRequest" Value="80"/>
+            <Setter Property="WidthRequest" Value="250"/>
+        </Style>
+    </CarouselPage.Resources>
+
+    <ContentPage>
+        <StackLayout
+            Style="{StaticResource Key=layout}">
+
+            <StackLayout
+                Style="{StaticResource Key=quoteLayout}">
+                <Label  
+                    Text="This is a motivational 
+                    quote so be happy :); 
+                    with a longer text"
+                    x:Name="lblText"
+                    FontFamily="roboto"
+                    TextColor="White"
+                    FontSize="20"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="400"
+                    HeightRequest="80"
+                    BackgroundColor="red"
+                    Padding="4"
+                    />
+            </StackLayout>
+
+            <Label  
+                Text=" - Author of the above quote"
+                x:Name="lblAuthor"
+                TextColor="White"
+                FontFamily="robotoItalic"
+                FontSize="16"
+                FontAttributes="Italic"
+                Margin="5, 8, 5, 10"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                />
+
+        </StackLayout>
+    </ContentPage>
+</CarouselPage>
